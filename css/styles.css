@@ -61,7 +61,7 @@ header nav ul li .header-footer:visited {
 }
 header nav ul li .header-footer:hover {
   color: rgb(84, 36, 129);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   transition-duration: 0.4s;
 }
 header nav ul li .header-footer:active {
