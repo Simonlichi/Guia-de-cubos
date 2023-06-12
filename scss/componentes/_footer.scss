@@ -1,0 +1,47 @@
+$color-letra: hsl(208, 100%, 97%);
+
+footer{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #671faa;
+    height: 100px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    margin-top: 1vh;
+
+    a{
+        text-decoration: none;
+        margin: 0px 5px 0px 5px;
+    }
+
+    p{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: hsl(208, 100%, 97%);
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    .header-footer{
+        &:link{
+        color: $color-letra;
+        }
+       
+        &:visited{
+            color: $color-letra;
+        }
+
+        &:hover{
+            color:rgb(84, 36, 129);
+            transition-duration: 0.4s;
+
+        }
+
+        &:active{
+            color: rgb(156, 155, 155);
+        }
+    }
+
+
+}

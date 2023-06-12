@@ -61,11 +61,102 @@ header nav ul li .header-footer:visited {
 }
 header nav ul li .header-footer:hover {
   color: rgb(84, 36, 129);
+  font-size: 1.5rem;
+  transition-duration: 0.4s;
 }
 header nav ul li .header-footer:active {
   color: rgb(156, 155, 155);
 }
 
+@media (max-width: 994px) {
+  header {
+    display: flex;
+    background-color: #8a2be2;
+    height: 100px;
+  }
+  header .título-principal {
+    text-align: center;
+    width: 60%;
+    max-width: 60%;
+    max-height: 100px;
+  }
+  header nav {
+    display: flex;
+    height: 100px;
+    width: 100%;
+    text-decoration: none;
+    align-items: center;
+    padding-left: 20%;
+  }
+}
+@media (max-width: 870px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  header .título-principal {
+    text-align: center;
+    width: 65%;
+    font-size: 2rem;
+    min-width: 250px;
+    max-height: 100px;
+  }
+  header nav {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    padding-left: 20%;
+  }
+  header nav .checkbtn {
+    display: block;
+    margin-right: 5%;
+  }
+  header nav .nav__menu {
+    position: fixed;
+    top: 100px;
+    height: 50%;
+    background-color: #671faa;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    clip-path: circle(0 at center);
+    transition: clip-path 1s ease-in-out;
+    z-index: 1;
+  }
+  header nav .nav__input:checked + .nav__menu {
+    clip-path: circle(100% at center);
+  }
+  header nav ul li {
+    display: block;
+    line-height: 10vh;
+  }
+  header nav ul li a:hover {
+    background: none;
+    color: #671faa;
+  }
+  header nav ul li a:active {
+    background: none;
+    color: #671faa;
+  }
+}
+@media (max-width: 500px) {
+  .checkbtn {
+    margin-right: 15%;
+  }
+}
+@media (max-width: 370px) {
+  .título-principal {
+    padding-top: 2vh;
+    font-size: 1.75rem;
+    align-items: center;
+    min-width: 200px;
+  }
+}
 .title {
   flex: 1;
   margin-top: 20px;
@@ -129,7 +220,7 @@ main div p {
   opacity: 50%;
   height: 55px;
   width: 280px;
-  color: aliceblue;
+  color: hsl(208, 100%, 97%);
   border-radius: 0px 0px 10px 10px;
 }
 .globo-container .globo a .titulo-enlace {
@@ -142,34 +233,37 @@ main div p {
   text-decoration: underline;
 }
 
-.marcas-container {
+.blog-container {
   width: 80%;
   margin: 0 10%;
   display: grid;
   grid-template-rows: auto;
   text-align: center;
 }
-.marcas-container .marcas {
+.blog-container .blog {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   padding: 0 10%;
 }
-.marcas-container .marcas img {
+.blog-container .blog img {
   width: 30vh;
   margin: 2vh 0;
 }
-.marcas-container .marcas h3 {
+.blog-container .blog h3 {
   text-decoration: underline;
-  font-size: 5vh;
+  font-size: 3vh;
 }
-.marcas-container .marcas ul {
+.blog-container .blog ul {
   list-style: none;
+}
+.blog-container .blog a {
+  text-decoration: none;
 }
 
 .formulario {
   background-color: #44097c;
   width: 60%;
   margin: 5% 20% 10% 20%;
-  color: aliceblue;
+  color: hsl(208, 100%, 97%);
   height: 52vh;
   display: grid;
   grid-template-rows: 15% 15% 30% 10%;
@@ -187,7 +281,7 @@ main div p {
 .formulario .info .input {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   background-color: #44097c;
-  color: aliceblue;
+  color: hsl(208, 100%, 97%);
   border: none;
   border-bottom: 1px solid silver;
 }
@@ -202,7 +296,7 @@ main div p {
   background-color: #8a2be2;
   border-radius: 3vw;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  color: aliceblue;
+  color: hsl(208, 100%, 97%);
   font-size: 3vh;
 }
 
@@ -231,6 +325,33 @@ main div p {
   color: #9940ec;
 }
 
+@media (max-width: 994px) {
+  .imagen-texto p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.25rem;
+    margin-top: 0.5vh;
+    margin-bottom: 4vh;
+  }
+}
+@media (max-width: 870px) {
+  .imagen-texto p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9rem;
+  }
+  .tutoriales img {
+    width: 80vw;
+  }
+}
+@media (max-width: 500px) {
+  .tutorial iframe {
+    height: 50vh;
+  }
+}
+@media (max-width: 370px) {
+  .tutorial iframe {
+    height: 40vh;
+  }
+}
 footer {
   position: absolute;
   bottom: 0;
@@ -260,6 +381,7 @@ footer .header-footer:visited {
 }
 footer .header-footer:hover {
   color: rgb(84, 36, 129);
+  transition-duration: 0.4s;
 }
 footer .header-footer:active {
   color: rgb(156, 155, 155);
