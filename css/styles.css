@@ -68,7 +68,7 @@ header nav ul li .header-footer:active {
   color: rgb(156, 155, 155);
 }
 
-@media (max-width: 994px) {
+@media (max-width: 1138px) {
   header {
     display: flex;
     background-color: #8a2be2;
