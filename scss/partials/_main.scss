@@ -214,7 +214,7 @@ $color-letra: hsl(208, 100%, 97%);
     }
 }
 
-@media (max-width: 870px){
+@media (max-width: 893px){
     .imagen-texto{
         p{
         font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -226,6 +226,35 @@ $color-letra: hsl(208, 100%, 97%);
         img{
             width: 80vw;
         }
+    }
+}
+
+@media (max-width: 600px){
+   main{
+        .formulario{
+            width: 70%;
+            margin: 5% 15% 10% 15%;
+            height: 54vh;
+            
+            .info{
+        
+                textarea{
+                    width: 40vw;
+                    height: 10vh;
+                }
+        
+                .submit{
+                    width: 20vw;
+                    height: 5vh;
+                    border: none;
+                    background-color: #8a2be2;
+                    border-radius: 3vw;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    color: $color-letra;
+                    font-size: 3vh;
+                }
+            }
+        }  
     }
 }
 
